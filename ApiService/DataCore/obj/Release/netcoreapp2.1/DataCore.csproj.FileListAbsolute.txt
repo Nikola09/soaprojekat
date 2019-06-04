@@ -1,0 +1,9 @@
+C:\Users\nikol\source\repos\ApiService\DataCore\bin\Release\netcoreapp2.1\DataCore.deps.json
+C:\Users\nikol\source\repos\ApiService\DataCore\bin\Release\netcoreapp2.1\DataCore.dll
+C:\Users\nikol\source\repos\ApiService\DataCore\bin\Release\netcoreapp2.1\DataCore.pdb
+C:\Users\nikol\source\repos\ApiService\DataCore\obj\Release\netcoreapp2.1\DataCore.csprojAssemblyReference.cache
+C:\Users\nikol\source\repos\ApiService\DataCore\obj\Release\netcoreapp2.1\DataCore.csproj.CoreCompileInputs.cache
+C:\Users\nikol\source\repos\ApiService\DataCore\obj\Release\netcoreapp2.1\DataCore.AssemblyInfoInputs.cache
+C:\Users\nikol\source\repos\ApiService\DataCore\obj\Release\netcoreapp2.1\DataCore.AssemblyInfo.cs
+C:\Users\nikol\source\repos\ApiService\DataCore\obj\Release\netcoreapp2.1\DataCore.dll
+C:\Users\nikol\source\repos\ApiService\DataCore\obj\Release\netcoreapp2.1\DataCore.pdb

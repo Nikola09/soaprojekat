@@ -1,0 +1,46 @@
+#!/bin/bash
+#
+#  curl commands to reload the data from the previous tutorial
+#
+#
+
+set -e
+
+
+curl () {
+  docker run --network fiware_default --rm appropriate/curl -s \
+    "$@"
+  printf "."
+}
+
+echo -e "⏳ Waiting for Context Broker to be available\n"
+while [ `docker run --network fiware_default --rm appropriate/curl -s -o /dev/null -w %{http_code} 'http://orion:1026/version'` -eq 000 ]
+do 
+  echo -e "Context Broker HTTP state: " `curl -s -o /dev/null -w %{http_code} 'http://orion:1026/version'` " (waiting for 200)"
+  sleep 1
+done
+printf "⏳ Loading context data "
+
+curl -X POST \
+  'http://orion:1026/v2/op/update' \
+  -H 'Content-Type: application/json' \
+  -g -d '{
+  "actionType": "append",
+  "entities": [
+  	{
+  		"id":"urn:ngsi-ld:Device:1","type":"Device",
+  		"level":{"type":"Integer","value":100},
+  		"battery_temperature": {"type":"Double","value":24.0},
+		"accuracy":{"type":"Double","value":300.0},
+		"latitude":{"type":"Double","value":50.84655735},
+		"longitude":{"type":"Double","value":0.133779246},
+		"altitude":{"type":"Double","value":114.915229866},
+		"ambient_light":{"type":"Double","value":6.0},
+		"ambient_temperature":{"type":"Double","value":30.0}
+  	}
+  ]
+}'
+
+
+
+echo -e " \033[1;32mdone\033[0m"

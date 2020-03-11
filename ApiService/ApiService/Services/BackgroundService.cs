@@ -9,6 +9,9 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using ApiService.Services.DataService;
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
+using System.Text;
 
 namespace ApiService.Services
 {
@@ -18,6 +21,7 @@ namespace ApiService.Services
         private readonly IConfiguration configuration;
         private readonly IServiceProvider serviceProvider;
         private BackgroundTimer backgroundTimer;
+        static readonly HttpClient client2 = new HttpClient();
 
         public BackgroundService(IConfiguration configuration, IHttpClientFactory clientFactory, IServiceProvider serviceProvider, BackgroundTimer backgroundTimer)
         {
@@ -37,14 +41,17 @@ namespace ApiService.Services
         private async void DoWork(object state)
         {
 
-            string baseUrl = "http://127.0.0.1:46385"; 
+            /*string baseUrl = "https://localhost:5000"; //"https://localhost:42385"; 
             var request = new HttpRequestMessage(HttpMethod.Get,
                 baseUrl + "/api/data");
 
-                var client = clientFactory.CreateClient();
+                //var client = clientFactory.CreateClient();
+           
 
-                var response = await client.SendAsync(request);
-            
+            //var response = await client.GetAsync(request.RequestUri);
+            HttpResponseMessage response = await client2.GetAsync(baseUrl + "/api/data");
+            response.EnsureSuccessStatusCode();
+
             if (response.IsSuccessStatusCode)
             {
                 var data = await response.Content.ReadAsAsync<IEnumerable<JObject>>();
@@ -71,6 +78,31 @@ namespace ApiService.Services
                         }
                     }
                 }
+            }*/
+            bool primio = false;
+            var factory = new ConnectionFactory() { HostName = "localhost" };
+            using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
+            {
+                channel.QueueDeclare(queue: "hello",
+                                     durable: false,
+                                     exclusive: false,
+                                     autoDelete: false,
+                                     arguments: null);
+
+                var consumer = new EventingBasicConsumer(channel);
+                consumer.Received += (model, ea) =>
+                {
+                    var body = ea.Body;
+                    var message = Encoding.UTF8.GetString(body);
+                    Console.WriteLine(" [x] Received {0}", message);
+                    primio = true;
+                };
+                channel.BasicConsume(queue: "hello",
+                                     autoAck: true,
+                                     consumer: consumer);
+
+                while (!primio) ;
             }
         }
 

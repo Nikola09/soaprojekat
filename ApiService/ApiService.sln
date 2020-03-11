@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectorService", "Collect
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataCore", "DataCore\DataCore.csproj", "{E8607BA4-0E3C-4822-83C0-02B512D6DDCE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageService", "StorageService\StorageService.csproj", "{3659DA0A-6923-4495-BF45-93368C005332}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C8BB9FC8-68BE-44CA-AFB8-886E1B497E12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{E8607BA4-0E3C-4822-83C0-02B512D6DDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8607BA4-0E3C-4822-83C0-02B512D6DDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8607BA4-0E3C-4822-83C0-02B512D6DDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3659DA0A-6923-4495-BF45-93368C005332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3659DA0A-6923-4495-BF45-93368C005332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3659DA0A-6923-4495-BF45-93368C005332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3659DA0A-6923-4495-BF45-93368C005332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8BB9FC8-68BE-44CA-AFB8-886E1B497E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8BB9FC8-68BE-44CA-AFB8-886E1B497E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8BB9FC8-68BE-44CA-AFB8-886E1B497E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8BB9FC8-68BE-44CA-AFB8-886E1B497E12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

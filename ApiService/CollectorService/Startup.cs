@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using CollectorService.Services;
 using Microsoft.AspNetCore.Builder;
@@ -11,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace CollectorService
 {
@@ -19,7 +22,9 @@ namespace CollectorService
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
         }
+
 
         public IConfiguration Configuration { get; }
 

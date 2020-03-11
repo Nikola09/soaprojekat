@@ -2,13 +2,12 @@
 using System.Threading.Tasks;
 using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using DataCore.Model;
+using RabbitMQ.Client;
+using System.Text;
 
 namespace CollectorService.Services
 {
@@ -18,19 +17,22 @@ namespace CollectorService.Services
         private readonly IStorageService storageService;
         private StreamReader streamReader1;
         private StreamReader streamReader2;
+        private StreamReader streamReader3;
+        private StreamReader streamReader4;
 
         public BackgroundService(IStorageService storageService)
         {
             this.storageService = storageService;
             streamReader1 = new StreamReader("data/Hand_Battery.txt");
             streamReader2 = new StreamReader("data/Hand_Location.txt");
+            streamReader3 = new StreamReader("data/Hand_API.txt");
+            streamReader4 = new StreamReader("data/Hand_Ambient.txt");
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
 
             timer = new Timer(DoWork, null, 0, storageService.Ttl / storageService.GetItemsNumber);
-
             return Task.CompletedTask;
         }
 
@@ -38,6 +40,8 @@ namespace CollectorService.Services
         {
             string lineBattery = streamReader1.ReadLine();
             string lineLocation = streamReader2.ReadLine();
+            string lineApi = streamReader3.ReadLine();
+            string lineAmbient = streamReader4.ReadLine();
 
             if (lineBattery != null)
             {
@@ -70,6 +74,61 @@ namespace CollectorService.Services
                 JObject obj = JObject.Parse(jsonLoc);
                 storageService.addItem(obj);
             }
+            if (lineApi != null)
+            {
+                var data = lineApi.Split(' ');
+                var apii = new Apii()
+                {
+                    Id = Convert.ToInt64(data[0]),
+                    Still = Convert.ToInt32(data[3]),
+                    OnFoot = Convert.ToInt32(data[4]),
+                    Walking = Convert.ToInt32(data[5]),
+                    Running = Convert.ToInt32(data[6]),
+                    OnBicycle = Convert.ToInt32(data[7]),
+                    InVehicle = Convert.ToInt32(data[8]),
+                    Tilting = Convert.ToInt32(data[9]),
+                    Unknown = Convert.ToInt32(data[10]),
+
+                };
+
+                string jsonApii = JsonConvert.SerializeObject(apii);
+                JObject obj = JObject.Parse(jsonApii);
+                //JObject cont = (JObject)obj[obj.Properties().ElementAt(0).Name];cont.Add("Id", Guid.NewGuid());
+                storageService.addItem(obj);
+            }
+            if (lineAmbient != null)
+            {
+                var data = lineAmbient.Split(' ');
+                var ambient = new Ambient()
+                {
+                    Id = Convert.ToInt64(data[0]),
+                    Lumix = Convert.ToSingle(data[3]),
+                    Temperature = Convert.ToSingle(data[4]),
+                };
+
+                string jsonAmbient = JsonConvert.SerializeObject(ambient);
+                JObject obj = JObject.Parse(jsonAmbient);
+                //JObject cont = (JObject)obj[obj.Properties().ElementAt(0).Name];cont.Add("Id", Guid.NewGuid());
+                storageService.addItem(obj);
+            }
+            var factory = new ConnectionFactory() { HostName = "localhost" };
+            using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
+            {
+                channel.QueueDeclare(queue: "hello",
+                                 durable: false,
+                                 exclusive: false,
+                                 autoDelete: false,
+                                 arguments: null);
+
+                string message = "Hello World!";
+                var body = Encoding.UTF8.GetBytes(message);
+
+                channel.BasicPublish(exchange: "",
+                                     routingKey: "hello",
+                                     basicProperties: null,
+                                     body: body);
+            }
         }
 
         public Task StopAsync(CancellationToken cancellationToken)
@@ -83,5 +142,7 @@ namespace CollectorService.Services
         {
             timer?.Dispose();
         }
+
+        
     }
 }

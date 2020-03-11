@@ -10,7 +10,7 @@ namespace CollectorService.Services
     {
         private List<object> list;
         private List<Timer> timers;
-        public int Ttl { get; } = 3000;
+        public int Ttl { get; } = 50000;
         public int GetItemsNumber { get; } = 10;
         public StorageService()
         {

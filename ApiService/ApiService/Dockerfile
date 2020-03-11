@@ -5,8 +5,7 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:2.1-nanoserver-1903 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
-EXPOSE 46385
-EXPOSE 46329
+#EXPOSE 42329
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.1-nanoserver-1903 AS build
 WORKDIR /src

@@ -1,0 +1,41 @@
+version: '3.4'
+
+networks:
+  app-tier:
+    driver: nat
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    networks:
+      - app-tier
+
+  CollectorService:
+    image: collectorservice
+    build:
+      context: ./CollectorService
+      dockerfile: Dockerfile
+    ports:
+      - '8881:80'
+      - '8883:443'
+    networks:
+      - app-tier
+    depends_on:
+      - rabbitmq
+
+  StorageService:
+    image: storageservice
+    build:
+      context: ./StorageService
+      dockerfile: Dockerfile
+    ports:
+      - '8882:80'
+      - '8884:443'
+    networks:
+      - app-tier
+    depends_on:
+      - rabbitmq
+

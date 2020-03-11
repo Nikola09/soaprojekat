@@ -1,0 +1,43 @@
+networks:
+  app-tier:
+    driver: nat
+services:
+  CollectorService:
+    build:
+      context: C:\Users\nikol\source\repos\ApiService\CollectorService
+      dockerfile: Dockerfile
+    depends_on:
+    - rabbitmq
+    image: collectorservice
+    networks:
+      app-tier: null
+    ports:
+    - published: 8881
+      target: 80
+    - published: 8883
+      target: 443
+  StorageService:
+    build:
+      context: C:\Users\nikol\source\repos\ApiService\StorageService
+      dockerfile: Dockerfile
+    depends_on:
+    - rabbitmq
+    image: storageservice
+    networks:
+      app-tier: null
+    ports:
+    - published: 8882
+      target: 80
+    - published: 8884
+      target: 443
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    networks:
+      app-tier: null
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+version: '3.4'

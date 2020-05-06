@@ -7,6 +7,7 @@ namespace DataCore.Model
     public class Ambient
     {
         public long Id { get; set; }
+        public long Timestamp { get; set; }
         public float Lumix { get; set; }
         public float Temperature { get; set; }
     }

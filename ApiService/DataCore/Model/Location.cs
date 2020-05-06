@@ -8,7 +8,7 @@ namespace DataCore.Model
     public class Location
     {
         public long Id { get; set; }
-
+        public long Timestamp { get; set; }
         public float Accuracy { get; set; }
 
         public double Latitude { get; set; }

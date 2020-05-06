@@ -1,0 +1,5 @@
+C:\Users\nikol\source\repos\NodejsService\obj\Debug\NodejsService.njsprojAssemblyReference.cache
+C:\Users\nikol\source\repos\NodejsService\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\nikol\source\repos\ApiService\NodejsService\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\nikol\source\repos\ApiService\NodejsService\obj\Debug\NodejsService.njsprojAssemblyReference.cache
+C:\Users\nikol\source\repos\ApiService\NodejsService\obj\Debug\NodejsService.njsproj.CoreCompileInputs.cache

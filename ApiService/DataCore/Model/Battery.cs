@@ -9,6 +9,8 @@ namespace DataCore.Model
     {
         public long Id { get; set; }
 
+        public long Timestamp { get; set; }
+
         public int Level { get; set; }
 
         public float Temperature { get; set; }

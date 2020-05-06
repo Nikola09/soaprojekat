@@ -9,3 +9,6 @@ C:\Users\nikol\source\repos\ApiService\obj\Debug\docker-compose.dcprojAssemblyRe
 C:\Users\nikol\source\repos\ApiService\obj\Debug\docker-compose.dcproj.CopyComplete
 C:\Users\nikol\source\repos\ApiService\bin\Debug\StorageService.dll
 C:\Users\nikol\source\repos\ApiService\bin\Debug\StorageService.pdb
+C:\Users\nikol\source\repos\ApiService\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\nikol\source\repos\ApiService\bin\Debug\MongoService.dll
+C:\Users\nikol\source\repos\ApiService\bin\Debug\MongoService.pdb

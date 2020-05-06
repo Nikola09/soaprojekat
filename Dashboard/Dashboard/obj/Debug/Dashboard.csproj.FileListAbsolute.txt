@@ -1,0 +1,16 @@
+C:\Users\nikol\source\repos\Dashboard\Dashboard\bin\Debug\Dashboard.exe.config
+C:\Users\nikol\source\repos\Dashboard\Dashboard\bin\Debug\Dashboard.exe
+C:\Users\nikol\source\repos\Dashboard\Dashboard\bin\Debug\Dashboard.pdb
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.csprojAssemblyReference.cache
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.FormMenu.resources
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.FormStorage.resources
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.Properties.Resources.resources
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.csproj.GenerateResource.cache
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.csproj.CoreCompileInputs.cache
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.exe
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.pdb
+C:\Users\nikol\source\repos\Dashboard\Dashboard\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nikol\source\repos\Dashboard\Dashboard\bin\Debug\Newtonsoft.Json.xml
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.csproj.CopyComplete
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.FormMongo.resources
+C:\Users\nikol\source\repos\Dashboard\Dashboard\obj\Debug\Dashboard.FormNodejs.resources

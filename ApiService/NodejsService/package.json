@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-service",
+  "version": "0.0.0",
+  "description": "NodejsService",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "seneca": "^3.20.2",
+    "seneca-entity": "^8.0.0",
+    "seneca-mongo-store": "^1.5.1",
+    "seneca-web": "^2.2.1",
+    "seneca-web-adapter-express": "^1.2.1"
+  }
+}

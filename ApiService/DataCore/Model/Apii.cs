@@ -7,6 +7,7 @@ namespace DataCore.Model
     public class Apii
     {
         public long Id { get; set; }
+        public long Timestamp { get; set; }
         public int Still { get; set; } // confidence %
         public int OnFoot { get; set; } // confidence %
         public int Walking { get; set; } // confidence %

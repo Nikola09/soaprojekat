@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageService", "StorageSe
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C8BB9FC8-68BE-44CA-AFB8-886E1B497E12}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoService", "MongoService\MongoService.csproj", "{95ECD574-3EBF-4704-9573-77A6C919B4A4}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsService", "NodejsService\NodejsService.njsproj", "{798DCB79-0DC0-40EF-8231-7767DEA22E32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{C8BB9FC8-68BE-44CA-AFB8-886E1B497E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8BB9FC8-68BE-44CA-AFB8-886E1B497E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8BB9FC8-68BE-44CA-AFB8-886E1B497E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95ECD574-3EBF-4704-9573-77A6C919B4A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95ECD574-3EBF-4704-9573-77A6C919B4A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95ECD574-3EBF-4704-9573-77A6C919B4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95ECD574-3EBF-4704-9573-77A6C919B4A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{798DCB79-0DC0-40EF-8231-7767DEA22E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798DCB79-0DC0-40EF-8231-7767DEA22E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798DCB79-0DC0-40EF-8231-7767DEA22E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798DCB79-0DC0-40EF-8231-7767DEA22E32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

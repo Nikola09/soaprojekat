@@ -38,7 +38,7 @@ namespace ApiService.Services
             return Task.CompletedTask;
         }
 
-        private async void DoWork(object state)
+        private void DoWork(object state)
         {
 
             /*string baseUrl = "https://localhost:5000"; //"https://localhost:42385"; 

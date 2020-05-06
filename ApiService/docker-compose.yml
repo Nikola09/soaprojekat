@@ -1,17 +1,45 @@
 version: '3.4'
-
+#networks:
+#     - app-tier:
+#        ipv4_address: 172.25.124.88
 networks:
   app-tier:
-    driver: nat
+#    driver: nat
+     ipam:
+      driver: default
+      config:
+        - subnet: "172.25.124.0/24"
+
 services:
   rabbitmq:
-    image: rabbitmq:3-management
+    image: rabbitmq:3
     container_name: rabbitmq
     ports:
       - '5672:5672'
       - '15672:15672'
     networks:
-      - app-tier
+      app-tier:
+        ipv4_address: 172.25.124.88
+
+  db:
+        image: "microsoft/mssql-server-windows-developer"
+        environment:
+            SA_PASSWORD: "pAS123456Xx"
+            ACCEPT_EULA: "Y"
+        networks:
+          app-tier:
+            ipv4_address: 172.25.124.81
+  mongo:
+    image: mongo:3.6
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+    networks:
+        app-tier:
+          ipv4_address: 172.25.124.82
 
   CollectorService:
     image: collectorservice
@@ -38,4 +66,31 @@ services:
       - app-tier
     depends_on:
       - rabbitmq
+      - db
+
+  MongoService:
+    image: mongoservice
+    build:
+      context: ./MongoService
+      dockerfile: Dockerfile
+    ports:
+      - '8885:80'
+      - '8886:443'
+    environment:
+      MongoDB__Host: 172.25.124.82
+    networks:
+      - app-tier
+    depends_on:
+      - rabbitmq
+      - mongo
+
+  NodejsService:
+    image: nodejsservice
+    ports:
+      - '4000:4000'
+    networks:
+      - app-tier
+    depends_on:
+      - rabbitmq
+      - mongo
 

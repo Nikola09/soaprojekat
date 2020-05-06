@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataCore.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -10,7 +11,7 @@ namespace CollectorService.Services
     {
         private List<object> list;
         private List<Timer> timers;
-        public int Ttl { get; } = 50000;
+        public int Ttl { get; } = 100000;//50000;
         public int GetItemsNumber { get; } = 10;
         public StorageService()
         {

@@ -18,3 +18,5 @@ C:\Users\nikol\source\repos\ApiService\ApiService\obj\Debug\netcoreapp2.1\ApiSer
 C:\Users\nikol\source\repos\ApiService\ApiService\obj\Debug\netcoreapp2.1\ApiService.csproj.CopyComplete
 C:\Users\nikol\source\repos\ApiService\ApiService\obj\Debug\netcoreapp2.1\ApiService.dll
 C:\Users\nikol\source\repos\ApiService\ApiService\obj\Debug\netcoreapp2.1\ApiService.pdb
+C:\Users\nikol\source\repos\ApiService\ApiService\obj\Debug\netcoreapp2.1\ApiService.csproj.CoreCompileInputs.cache
+C:\Users\nikol\source\repos\ApiService\ApiService\obj\Debug\netcoreapp2.1\ApiService.genruntimeconfig.cache

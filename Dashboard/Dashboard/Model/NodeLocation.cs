@@ -9,7 +9,7 @@ namespace Dashboard.Model
 	class NodeLocation
 	{
         public string Id { get; set; }
-        public long Storage_Id { get; set; }
+        //public long Storage_Id { get; set; }
         public long Timestamp { get; set; }
         public float Accuracy { get; set; }
         public double Latitude { get; set; }

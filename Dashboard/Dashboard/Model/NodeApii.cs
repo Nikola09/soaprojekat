@@ -9,7 +9,7 @@ namespace Dashboard.Model
 	class NodeApii
 	{
         public string Id { get; set; }
-        public long Storage_Id { get; set; }
+        //public long Storage_Id { get; set; }
         public long Timestamp { get; set; }
         public int Still { get; set; }
         public int OnFoot { get; set; }

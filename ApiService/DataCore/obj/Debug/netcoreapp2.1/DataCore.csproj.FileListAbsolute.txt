@@ -6,3 +6,4 @@ C:\Users\nikol\source\repos\ApiService\DataCore\obj\Debug\netcoreapp2.1\DataCore
 C:\Users\nikol\source\repos\ApiService\DataCore\obj\Debug\netcoreapp2.1\DataCore.dll
 C:\Users\nikol\source\repos\ApiService\DataCore\obj\Debug\netcoreapp2.1\DataCore.pdb
 C:\Users\nikol\source\repos\ApiService\DataCore\obj\Debug\netcoreapp2.1\DataCore.csproj.CoreCompileInputs.cache
+C:\Users\nikol\source\repos\ApiService\DataCore\obj\Debug\netcoreapp2.1\DataCore.csprojAssemblyReference.cache

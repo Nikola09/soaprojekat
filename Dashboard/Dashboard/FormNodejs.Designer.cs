@@ -38,7 +38,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.storageIdDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.timestampDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.accuracyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.latitudeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,13 +45,11 @@
 			this.altitudeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nodeLocationBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.storageIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.timestampDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.temperatureDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nodeBatteryBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.storageIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.timestampDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.stillDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.onFootDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +61,6 @@
 			this.unknownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nodeApiiBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.storageIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.timestampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.lumixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.temperatureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,27 +77,28 @@
 			// 
 			// dataGridView1
 			// 
+			this.dataGridView1.AllowUserToDeleteRows = false;
 			this.dataGridView1.AutoGenerateColumns = false;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.storageIdDataGridViewTextBoxColumn,
             this.timestampDataGridViewTextBoxColumn,
             this.lumixDataGridViewTextBoxColumn,
             this.temperatureDataGridViewTextBoxColumn});
 			this.dataGridView1.DataSource = this.nodeAmbientBindingSource;
 			this.dataGridView1.Location = new System.Drawing.Point(12, 30);
 			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.Size = new System.Drawing.Size(442, 251);
 			this.dataGridView1.TabIndex = 0;
 			// 
 			// dataGridView2
 			// 
+			this.dataGridView2.AllowUserToDeleteRows = false;
 			this.dataGridView2.AutoGenerateColumns = false;
 			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn1,
-            this.storageIdDataGridViewTextBoxColumn1,
             this.timestampDataGridViewTextBoxColumn1,
             this.stillDataGridViewTextBoxColumn,
             this.onFootDataGridViewTextBoxColumn,
@@ -114,32 +111,34 @@
 			this.dataGridView2.DataSource = this.nodeApiiBindingSource;
 			this.dataGridView2.Location = new System.Drawing.Point(467, 30);
 			this.dataGridView2.Name = "dataGridView2";
+			this.dataGridView2.ReadOnly = true;
 			this.dataGridView2.Size = new System.Drawing.Size(565, 251);
 			this.dataGridView2.TabIndex = 1;
 			// 
 			// dataGridView3
 			// 
+			this.dataGridView3.AllowUserToDeleteRows = false;
 			this.dataGridView3.AutoGenerateColumns = false;
 			this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn2,
-            this.storageIdDataGridViewTextBoxColumn2,
             this.timestampDataGridViewTextBoxColumn2,
             this.levelDataGridViewTextBoxColumn,
             this.temperatureDataGridViewTextBoxColumn1});
 			this.dataGridView3.DataSource = this.nodeBatteryBindingSource;
 			this.dataGridView3.Location = new System.Drawing.Point(12, 305);
 			this.dataGridView3.Name = "dataGridView3";
+			this.dataGridView3.ReadOnly = true;
 			this.dataGridView3.Size = new System.Drawing.Size(442, 251);
 			this.dataGridView3.TabIndex = 2;
 			// 
 			// dataGridView4
 			// 
+			this.dataGridView4.AllowUserToDeleteRows = false;
 			this.dataGridView4.AutoGenerateColumns = false;
 			this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn3,
-            this.storageIdDataGridViewTextBoxColumn3,
             this.timestampDataGridViewTextBoxColumn3,
             this.accuracyDataGridViewTextBoxColumn,
             this.latitudeDataGridViewTextBoxColumn,
@@ -148,6 +147,7 @@
 			this.dataGridView4.DataSource = this.nodeLocationBindingSource;
 			this.dataGridView4.Location = new System.Drawing.Point(467, 305);
 			this.dataGridView4.Name = "dataGridView4";
+			this.dataGridView4.ReadOnly = true;
 			this.dataGridView4.Size = new System.Drawing.Size(565, 251);
 			this.dataGridView4.TabIndex = 3;
 			// 
@@ -196,42 +196,42 @@
 			this.idDataGridViewTextBoxColumn3.DataPropertyName = "Id";
 			this.idDataGridViewTextBoxColumn3.HeaderText = "Id";
 			this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
-			// 
-			// storageIdDataGridViewTextBoxColumn3
-			// 
-			this.storageIdDataGridViewTextBoxColumn3.DataPropertyName = "Storage_Id";
-			this.storageIdDataGridViewTextBoxColumn3.HeaderText = "Storage_Id";
-			this.storageIdDataGridViewTextBoxColumn3.Name = "storageIdDataGridViewTextBoxColumn3";
+			this.idDataGridViewTextBoxColumn3.ReadOnly = true;
 			// 
 			// timestampDataGridViewTextBoxColumn3
 			// 
 			this.timestampDataGridViewTextBoxColumn3.DataPropertyName = "Timestamp";
 			this.timestampDataGridViewTextBoxColumn3.HeaderText = "Timestamp";
 			this.timestampDataGridViewTextBoxColumn3.Name = "timestampDataGridViewTextBoxColumn3";
+			this.timestampDataGridViewTextBoxColumn3.ReadOnly = true;
 			// 
 			// accuracyDataGridViewTextBoxColumn
 			// 
 			this.accuracyDataGridViewTextBoxColumn.DataPropertyName = "Accuracy";
 			this.accuracyDataGridViewTextBoxColumn.HeaderText = "Accuracy";
 			this.accuracyDataGridViewTextBoxColumn.Name = "accuracyDataGridViewTextBoxColumn";
+			this.accuracyDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// latitudeDataGridViewTextBoxColumn
 			// 
 			this.latitudeDataGridViewTextBoxColumn.DataPropertyName = "Latitude";
 			this.latitudeDataGridViewTextBoxColumn.HeaderText = "Latitude";
 			this.latitudeDataGridViewTextBoxColumn.Name = "latitudeDataGridViewTextBoxColumn";
+			this.latitudeDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// longitudeDataGridViewTextBoxColumn
 			// 
 			this.longitudeDataGridViewTextBoxColumn.DataPropertyName = "Longitude";
 			this.longitudeDataGridViewTextBoxColumn.HeaderText = "Longitude";
 			this.longitudeDataGridViewTextBoxColumn.Name = "longitudeDataGridViewTextBoxColumn";
+			this.longitudeDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// altitudeDataGridViewTextBoxColumn
 			// 
 			this.altitudeDataGridViewTextBoxColumn.DataPropertyName = "Altitude";
 			this.altitudeDataGridViewTextBoxColumn.HeaderText = "Altitude";
 			this.altitudeDataGridViewTextBoxColumn.Name = "altitudeDataGridViewTextBoxColumn";
+			this.altitudeDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// nodeLocationBindingSource
 			// 
@@ -242,30 +242,28 @@
 			this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
 			this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
 			this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
-			// 
-			// storageIdDataGridViewTextBoxColumn2
-			// 
-			this.storageIdDataGridViewTextBoxColumn2.DataPropertyName = "Storage_Id";
-			this.storageIdDataGridViewTextBoxColumn2.HeaderText = "Storage_Id";
-			this.storageIdDataGridViewTextBoxColumn2.Name = "storageIdDataGridViewTextBoxColumn2";
+			this.idDataGridViewTextBoxColumn2.ReadOnly = true;
 			// 
 			// timestampDataGridViewTextBoxColumn2
 			// 
 			this.timestampDataGridViewTextBoxColumn2.DataPropertyName = "Timestamp";
 			this.timestampDataGridViewTextBoxColumn2.HeaderText = "Timestamp";
 			this.timestampDataGridViewTextBoxColumn2.Name = "timestampDataGridViewTextBoxColumn2";
+			this.timestampDataGridViewTextBoxColumn2.ReadOnly = true;
 			// 
 			// levelDataGridViewTextBoxColumn
 			// 
 			this.levelDataGridViewTextBoxColumn.DataPropertyName = "Level";
 			this.levelDataGridViewTextBoxColumn.HeaderText = "Level";
 			this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
+			this.levelDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// temperatureDataGridViewTextBoxColumn1
 			// 
 			this.temperatureDataGridViewTextBoxColumn1.DataPropertyName = "Temperature";
 			this.temperatureDataGridViewTextBoxColumn1.HeaderText = "Temperature";
 			this.temperatureDataGridViewTextBoxColumn1.Name = "temperatureDataGridViewTextBoxColumn1";
+			this.temperatureDataGridViewTextBoxColumn1.ReadOnly = true;
 			// 
 			// nodeBatteryBindingSource
 			// 
@@ -276,66 +274,70 @@
 			this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
 			this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
 			this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-			// 
-			// storageIdDataGridViewTextBoxColumn1
-			// 
-			this.storageIdDataGridViewTextBoxColumn1.DataPropertyName = "Storage_Id";
-			this.storageIdDataGridViewTextBoxColumn1.HeaderText = "Storage_Id";
-			this.storageIdDataGridViewTextBoxColumn1.Name = "storageIdDataGridViewTextBoxColumn1";
+			this.idDataGridViewTextBoxColumn1.ReadOnly = true;
 			// 
 			// timestampDataGridViewTextBoxColumn1
 			// 
 			this.timestampDataGridViewTextBoxColumn1.DataPropertyName = "Timestamp";
 			this.timestampDataGridViewTextBoxColumn1.HeaderText = "Timestamp";
 			this.timestampDataGridViewTextBoxColumn1.Name = "timestampDataGridViewTextBoxColumn1";
+			this.timestampDataGridViewTextBoxColumn1.ReadOnly = true;
 			// 
 			// stillDataGridViewTextBoxColumn
 			// 
 			this.stillDataGridViewTextBoxColumn.DataPropertyName = "Still";
 			this.stillDataGridViewTextBoxColumn.HeaderText = "Still";
 			this.stillDataGridViewTextBoxColumn.Name = "stillDataGridViewTextBoxColumn";
+			this.stillDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// onFootDataGridViewTextBoxColumn
 			// 
 			this.onFootDataGridViewTextBoxColumn.DataPropertyName = "OnFoot";
 			this.onFootDataGridViewTextBoxColumn.HeaderText = "OnFoot";
 			this.onFootDataGridViewTextBoxColumn.Name = "onFootDataGridViewTextBoxColumn";
+			this.onFootDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// walkingDataGridViewTextBoxColumn
 			// 
 			this.walkingDataGridViewTextBoxColumn.DataPropertyName = "Walking";
 			this.walkingDataGridViewTextBoxColumn.HeaderText = "Walking";
 			this.walkingDataGridViewTextBoxColumn.Name = "walkingDataGridViewTextBoxColumn";
+			this.walkingDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// runningDataGridViewTextBoxColumn
 			// 
 			this.runningDataGridViewTextBoxColumn.DataPropertyName = "Running";
 			this.runningDataGridViewTextBoxColumn.HeaderText = "Running";
 			this.runningDataGridViewTextBoxColumn.Name = "runningDataGridViewTextBoxColumn";
+			this.runningDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// onBicycleDataGridViewTextBoxColumn
 			// 
 			this.onBicycleDataGridViewTextBoxColumn.DataPropertyName = "OnBicycle";
 			this.onBicycleDataGridViewTextBoxColumn.HeaderText = "OnBicycle";
 			this.onBicycleDataGridViewTextBoxColumn.Name = "onBicycleDataGridViewTextBoxColumn";
+			this.onBicycleDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// inVehicleDataGridViewTextBoxColumn
 			// 
 			this.inVehicleDataGridViewTextBoxColumn.DataPropertyName = "InVehicle";
 			this.inVehicleDataGridViewTextBoxColumn.HeaderText = "InVehicle";
 			this.inVehicleDataGridViewTextBoxColumn.Name = "inVehicleDataGridViewTextBoxColumn";
+			this.inVehicleDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// tiltingDataGridViewTextBoxColumn
 			// 
 			this.tiltingDataGridViewTextBoxColumn.DataPropertyName = "Tilting";
 			this.tiltingDataGridViewTextBoxColumn.HeaderText = "Tilting";
 			this.tiltingDataGridViewTextBoxColumn.Name = "tiltingDataGridViewTextBoxColumn";
+			this.tiltingDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// unknownDataGridViewTextBoxColumn
 			// 
 			this.unknownDataGridViewTextBoxColumn.DataPropertyName = "Unknown";
 			this.unknownDataGridViewTextBoxColumn.HeaderText = "Unknown";
 			this.unknownDataGridViewTextBoxColumn.Name = "unknownDataGridViewTextBoxColumn";
+			this.unknownDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// nodeApiiBindingSource
 			// 
@@ -346,30 +348,28 @@
 			this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
 			this.idDataGridViewTextBoxColumn.HeaderText = "Id";
 			this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-			// 
-			// storageIdDataGridViewTextBoxColumn
-			// 
-			this.storageIdDataGridViewTextBoxColumn.DataPropertyName = "Storage_Id";
-			this.storageIdDataGridViewTextBoxColumn.HeaderText = "Storage_Id";
-			this.storageIdDataGridViewTextBoxColumn.Name = "storageIdDataGridViewTextBoxColumn";
+			this.idDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// timestampDataGridViewTextBoxColumn
 			// 
 			this.timestampDataGridViewTextBoxColumn.DataPropertyName = "Timestamp";
 			this.timestampDataGridViewTextBoxColumn.HeaderText = "Timestamp";
 			this.timestampDataGridViewTextBoxColumn.Name = "timestampDataGridViewTextBoxColumn";
+			this.timestampDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// lumixDataGridViewTextBoxColumn
 			// 
 			this.lumixDataGridViewTextBoxColumn.DataPropertyName = "Lumix";
 			this.lumixDataGridViewTextBoxColumn.HeaderText = "Lumix";
 			this.lumixDataGridViewTextBoxColumn.Name = "lumixDataGridViewTextBoxColumn";
+			this.lumixDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// temperatureDataGridViewTextBoxColumn
 			// 
 			this.temperatureDataGridViewTextBoxColumn.DataPropertyName = "Temperature";
 			this.temperatureDataGridViewTextBoxColumn.HeaderText = "Temperature";
 			this.temperatureDataGridViewTextBoxColumn.Name = "temperatureDataGridViewTextBoxColumn";
+			this.temperatureDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// nodeAmbientBindingSource
 			// 

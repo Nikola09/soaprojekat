@@ -30,27 +30,13 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.internalIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.timestampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.lumixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.temperatureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.mongodbAmbientBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dataGridView2 = new System.Windows.Forms.DataGridView();
-			this.dataGridView3 = new System.Windows.Forms.DataGridView();
-			this.dataGridView4 = new System.Windows.Forms.DataGridView();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.internalIdDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.timestampDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.accuracyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.latitudeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.longitudeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.altitudeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.mongodbLocationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.internalIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.timestampDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.temperatureDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.mongodbBatteryBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.internalIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.timestampDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,24 +49,39 @@
 			this.tiltingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.unknownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.mongodbApiiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.internalIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.timestampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.lumixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.temperatureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.mongodbAmbientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dataGridView3 = new System.Windows.Forms.DataGridView();
+			this.internalIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.timestampDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.temperatureDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.mongodbBatteryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dataGridView4 = new System.Windows.Forms.DataGridView();
+			this.internalIdDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.timestampDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.accuracyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.latitudeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.longitudeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.altitudeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.mongodbLocationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.mongodbAmbientBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.mongodbApiiBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.mongodbBatteryBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.mongodbLocationBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.mongodbBatteryBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.mongodbApiiBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.mongodbAmbientBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dataGridView1
 			// 
+			this.dataGridView1.AllowUserToDeleteRows = false;
 			this.dataGridView1.AutoGenerateColumns = false;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -92,11 +93,52 @@
 			this.dataGridView1.DataSource = this.mongodbAmbientBindingSource;
 			this.dataGridView1.Location = new System.Drawing.Point(12, 30);
 			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.Size = new System.Drawing.Size(442, 251);
 			this.dataGridView1.TabIndex = 0;
 			// 
+			// internalIdDataGridViewTextBoxColumn
+			// 
+			this.internalIdDataGridViewTextBoxColumn.DataPropertyName = "InternalId";
+			this.internalIdDataGridViewTextBoxColumn.HeaderText = "InternalId";
+			this.internalIdDataGridViewTextBoxColumn.Name = "internalIdDataGridViewTextBoxColumn";
+			this.internalIdDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// idDataGridViewTextBoxColumn
+			// 
+			this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+			this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+			this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+			this.idDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// timestampDataGridViewTextBoxColumn
+			// 
+			this.timestampDataGridViewTextBoxColumn.DataPropertyName = "Timestamp";
+			this.timestampDataGridViewTextBoxColumn.HeaderText = "Timestamp";
+			this.timestampDataGridViewTextBoxColumn.Name = "timestampDataGridViewTextBoxColumn";
+			this.timestampDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// lumixDataGridViewTextBoxColumn
+			// 
+			this.lumixDataGridViewTextBoxColumn.DataPropertyName = "Lumix";
+			this.lumixDataGridViewTextBoxColumn.HeaderText = "Lumix";
+			this.lumixDataGridViewTextBoxColumn.Name = "lumixDataGridViewTextBoxColumn";
+			this.lumixDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// temperatureDataGridViewTextBoxColumn
+			// 
+			this.temperatureDataGridViewTextBoxColumn.DataPropertyName = "Temperature";
+			this.temperatureDataGridViewTextBoxColumn.HeaderText = "Temperature";
+			this.temperatureDataGridViewTextBoxColumn.Name = "temperatureDataGridViewTextBoxColumn";
+			this.temperatureDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// mongodbAmbientBindingSource
+			// 
+			this.mongodbAmbientBindingSource.DataSource = typeof(Dashboard.Model.MongodbAmbient);
+			// 
 			// dataGridView2
 			// 
+			this.dataGridView2.AllowUserToDeleteRows = false;
 			this.dataGridView2.AutoGenerateColumns = false;
 			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -114,11 +156,94 @@
 			this.dataGridView2.DataSource = this.mongodbApiiBindingSource;
 			this.dataGridView2.Location = new System.Drawing.Point(467, 30);
 			this.dataGridView2.Name = "dataGridView2";
+			this.dataGridView2.ReadOnly = true;
 			this.dataGridView2.Size = new System.Drawing.Size(565, 251);
 			this.dataGridView2.TabIndex = 1;
 			// 
+			// internalIdDataGridViewTextBoxColumn1
+			// 
+			this.internalIdDataGridViewTextBoxColumn1.DataPropertyName = "InternalId";
+			this.internalIdDataGridViewTextBoxColumn1.HeaderText = "InternalId";
+			this.internalIdDataGridViewTextBoxColumn1.Name = "internalIdDataGridViewTextBoxColumn1";
+			this.internalIdDataGridViewTextBoxColumn1.ReadOnly = true;
+			// 
+			// idDataGridViewTextBoxColumn1
+			// 
+			this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+			this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
+			this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+			this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+			// 
+			// timestampDataGridViewTextBoxColumn1
+			// 
+			this.timestampDataGridViewTextBoxColumn1.DataPropertyName = "Timestamp";
+			this.timestampDataGridViewTextBoxColumn1.HeaderText = "Timestamp";
+			this.timestampDataGridViewTextBoxColumn1.Name = "timestampDataGridViewTextBoxColumn1";
+			this.timestampDataGridViewTextBoxColumn1.ReadOnly = true;
+			// 
+			// stillDataGridViewTextBoxColumn
+			// 
+			this.stillDataGridViewTextBoxColumn.DataPropertyName = "Still";
+			this.stillDataGridViewTextBoxColumn.HeaderText = "Still";
+			this.stillDataGridViewTextBoxColumn.Name = "stillDataGridViewTextBoxColumn";
+			this.stillDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// onFootDataGridViewTextBoxColumn
+			// 
+			this.onFootDataGridViewTextBoxColumn.DataPropertyName = "OnFoot";
+			this.onFootDataGridViewTextBoxColumn.HeaderText = "OnFoot";
+			this.onFootDataGridViewTextBoxColumn.Name = "onFootDataGridViewTextBoxColumn";
+			this.onFootDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// walkingDataGridViewTextBoxColumn
+			// 
+			this.walkingDataGridViewTextBoxColumn.DataPropertyName = "Walking";
+			this.walkingDataGridViewTextBoxColumn.HeaderText = "Walking";
+			this.walkingDataGridViewTextBoxColumn.Name = "walkingDataGridViewTextBoxColumn";
+			this.walkingDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// runningDataGridViewTextBoxColumn
+			// 
+			this.runningDataGridViewTextBoxColumn.DataPropertyName = "Running";
+			this.runningDataGridViewTextBoxColumn.HeaderText = "Running";
+			this.runningDataGridViewTextBoxColumn.Name = "runningDataGridViewTextBoxColumn";
+			this.runningDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// onBicycleDataGridViewTextBoxColumn
+			// 
+			this.onBicycleDataGridViewTextBoxColumn.DataPropertyName = "OnBicycle";
+			this.onBicycleDataGridViewTextBoxColumn.HeaderText = "OnBicycle";
+			this.onBicycleDataGridViewTextBoxColumn.Name = "onBicycleDataGridViewTextBoxColumn";
+			this.onBicycleDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// inVehicleDataGridViewTextBoxColumn
+			// 
+			this.inVehicleDataGridViewTextBoxColumn.DataPropertyName = "InVehicle";
+			this.inVehicleDataGridViewTextBoxColumn.HeaderText = "InVehicle";
+			this.inVehicleDataGridViewTextBoxColumn.Name = "inVehicleDataGridViewTextBoxColumn";
+			this.inVehicleDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// tiltingDataGridViewTextBoxColumn
+			// 
+			this.tiltingDataGridViewTextBoxColumn.DataPropertyName = "Tilting";
+			this.tiltingDataGridViewTextBoxColumn.HeaderText = "Tilting";
+			this.tiltingDataGridViewTextBoxColumn.Name = "tiltingDataGridViewTextBoxColumn";
+			this.tiltingDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// unknownDataGridViewTextBoxColumn
+			// 
+			this.unknownDataGridViewTextBoxColumn.DataPropertyName = "Unknown";
+			this.unknownDataGridViewTextBoxColumn.HeaderText = "Unknown";
+			this.unknownDataGridViewTextBoxColumn.Name = "unknownDataGridViewTextBoxColumn";
+			this.unknownDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// mongodbApiiBindingSource
+			// 
+			this.mongodbApiiBindingSource.DataSource = typeof(Dashboard.Model.MongodbApii);
+			// 
 			// dataGridView3
 			// 
+			this.dataGridView3.AllowUserToDeleteRows = false;
 			this.dataGridView3.AutoGenerateColumns = false;
 			this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -130,11 +255,47 @@
 			this.dataGridView3.DataSource = this.mongodbBatteryBindingSource;
 			this.dataGridView3.Location = new System.Drawing.Point(12, 305);
 			this.dataGridView3.Name = "dataGridView3";
+			this.dataGridView3.ReadOnly = true;
 			this.dataGridView3.Size = new System.Drawing.Size(442, 251);
 			this.dataGridView3.TabIndex = 2;
 			// 
+			// internalIdDataGridViewTextBoxColumn2
+			// 
+			this.internalIdDataGridViewTextBoxColumn2.DataPropertyName = "InternalId";
+			this.internalIdDataGridViewTextBoxColumn2.HeaderText = "InternalId";
+			this.internalIdDataGridViewTextBoxColumn2.Name = "internalIdDataGridViewTextBoxColumn2";
+			// 
+			// idDataGridViewTextBoxColumn2
+			// 
+			this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
+			this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
+			this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+			// 
+			// timestampDataGridViewTextBoxColumn2
+			// 
+			this.timestampDataGridViewTextBoxColumn2.DataPropertyName = "Timestamp";
+			this.timestampDataGridViewTextBoxColumn2.HeaderText = "Timestamp";
+			this.timestampDataGridViewTextBoxColumn2.Name = "timestampDataGridViewTextBoxColumn2";
+			// 
+			// levelDataGridViewTextBoxColumn
+			// 
+			this.levelDataGridViewTextBoxColumn.DataPropertyName = "Level";
+			this.levelDataGridViewTextBoxColumn.HeaderText = "Level";
+			this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
+			// 
+			// temperatureDataGridViewTextBoxColumn1
+			// 
+			this.temperatureDataGridViewTextBoxColumn1.DataPropertyName = "Temperature";
+			this.temperatureDataGridViewTextBoxColumn1.HeaderText = "Temperature";
+			this.temperatureDataGridViewTextBoxColumn1.Name = "temperatureDataGridViewTextBoxColumn1";
+			// 
+			// mongodbBatteryBindingSource
+			// 
+			this.mongodbBatteryBindingSource.DataSource = typeof(Dashboard.Model.MongodbBattery);
+			// 
 			// dataGridView4
 			// 
+			this.dataGridView4.AllowUserToDeleteRows = false;
 			this.dataGridView4.AutoGenerateColumns = false;
 			this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -148,48 +309,9 @@
 			this.dataGridView4.DataSource = this.mongodbLocationBindingSource;
 			this.dataGridView4.Location = new System.Drawing.Point(467, 305);
 			this.dataGridView4.Name = "dataGridView4";
+			this.dataGridView4.ReadOnly = true;
 			this.dataGridView4.Size = new System.Drawing.Size(565, 251);
 			this.dataGridView4.TabIndex = 3;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(12, 9);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(143, 18);
-			this.label1.TabIndex = 5;
-			this.label1.Text = "Ambient information:";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(464, 9);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(129, 18);
-			this.label2.TabIndex = 6;
-			this.label2.Text = "Action confidence:";
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(12, 284);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(136, 18);
-			this.label3.TabIndex = 7;
-			this.label3.Text = "Battery information:";
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(464, 284);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(147, 18);
-			this.label4.TabIndex = 8;
-			this.label4.Text = "Location information:";
 			// 
 			// internalIdDataGridViewTextBoxColumn3
 			// 
@@ -237,143 +359,45 @@
 			// 
 			this.mongodbLocationBindingSource.DataSource = typeof(Dashboard.Model.MongodbLocation);
 			// 
-			// internalIdDataGridViewTextBoxColumn2
+			// label1
 			// 
-			this.internalIdDataGridViewTextBoxColumn2.DataPropertyName = "InternalId";
-			this.internalIdDataGridViewTextBoxColumn2.HeaderText = "InternalId";
-			this.internalIdDataGridViewTextBoxColumn2.Name = "internalIdDataGridViewTextBoxColumn2";
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(12, 9);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(143, 18);
+			this.label1.TabIndex = 5;
+			this.label1.Text = "Ambient information:";
 			// 
-			// idDataGridViewTextBoxColumn2
+			// label2
 			// 
-			this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
-			this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
-			this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(464, 9);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(129, 18);
+			this.label2.TabIndex = 6;
+			this.label2.Text = "Action confidence:";
 			// 
-			// timestampDataGridViewTextBoxColumn2
+			// label3
 			// 
-			this.timestampDataGridViewTextBoxColumn2.DataPropertyName = "Timestamp";
-			this.timestampDataGridViewTextBoxColumn2.HeaderText = "Timestamp";
-			this.timestampDataGridViewTextBoxColumn2.Name = "timestampDataGridViewTextBoxColumn2";
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(12, 284);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(136, 18);
+			this.label3.TabIndex = 7;
+			this.label3.Text = "Battery information:";
 			// 
-			// levelDataGridViewTextBoxColumn
+			// label4
 			// 
-			this.levelDataGridViewTextBoxColumn.DataPropertyName = "Level";
-			this.levelDataGridViewTextBoxColumn.HeaderText = "Level";
-			this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
-			// 
-			// temperatureDataGridViewTextBoxColumn1
-			// 
-			this.temperatureDataGridViewTextBoxColumn1.DataPropertyName = "Temperature";
-			this.temperatureDataGridViewTextBoxColumn1.HeaderText = "Temperature";
-			this.temperatureDataGridViewTextBoxColumn1.Name = "temperatureDataGridViewTextBoxColumn1";
-			// 
-			// mongodbBatteryBindingSource
-			// 
-			this.mongodbBatteryBindingSource.DataSource = typeof(Dashboard.Model.MongodbBattery);
-			// 
-			// internalIdDataGridViewTextBoxColumn1
-			// 
-			this.internalIdDataGridViewTextBoxColumn1.DataPropertyName = "InternalId";
-			this.internalIdDataGridViewTextBoxColumn1.HeaderText = "InternalId";
-			this.internalIdDataGridViewTextBoxColumn1.Name = "internalIdDataGridViewTextBoxColumn1";
-			// 
-			// idDataGridViewTextBoxColumn1
-			// 
-			this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-			this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
-			this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-			// 
-			// timestampDataGridViewTextBoxColumn1
-			// 
-			this.timestampDataGridViewTextBoxColumn1.DataPropertyName = "Timestamp";
-			this.timestampDataGridViewTextBoxColumn1.HeaderText = "Timestamp";
-			this.timestampDataGridViewTextBoxColumn1.Name = "timestampDataGridViewTextBoxColumn1";
-			// 
-			// stillDataGridViewTextBoxColumn
-			// 
-			this.stillDataGridViewTextBoxColumn.DataPropertyName = "Still";
-			this.stillDataGridViewTextBoxColumn.HeaderText = "Still";
-			this.stillDataGridViewTextBoxColumn.Name = "stillDataGridViewTextBoxColumn";
-			// 
-			// onFootDataGridViewTextBoxColumn
-			// 
-			this.onFootDataGridViewTextBoxColumn.DataPropertyName = "OnFoot";
-			this.onFootDataGridViewTextBoxColumn.HeaderText = "OnFoot";
-			this.onFootDataGridViewTextBoxColumn.Name = "onFootDataGridViewTextBoxColumn";
-			// 
-			// walkingDataGridViewTextBoxColumn
-			// 
-			this.walkingDataGridViewTextBoxColumn.DataPropertyName = "Walking";
-			this.walkingDataGridViewTextBoxColumn.HeaderText = "Walking";
-			this.walkingDataGridViewTextBoxColumn.Name = "walkingDataGridViewTextBoxColumn";
-			// 
-			// runningDataGridViewTextBoxColumn
-			// 
-			this.runningDataGridViewTextBoxColumn.DataPropertyName = "Running";
-			this.runningDataGridViewTextBoxColumn.HeaderText = "Running";
-			this.runningDataGridViewTextBoxColumn.Name = "runningDataGridViewTextBoxColumn";
-			// 
-			// onBicycleDataGridViewTextBoxColumn
-			// 
-			this.onBicycleDataGridViewTextBoxColumn.DataPropertyName = "OnBicycle";
-			this.onBicycleDataGridViewTextBoxColumn.HeaderText = "OnBicycle";
-			this.onBicycleDataGridViewTextBoxColumn.Name = "onBicycleDataGridViewTextBoxColumn";
-			// 
-			// inVehicleDataGridViewTextBoxColumn
-			// 
-			this.inVehicleDataGridViewTextBoxColumn.DataPropertyName = "InVehicle";
-			this.inVehicleDataGridViewTextBoxColumn.HeaderText = "InVehicle";
-			this.inVehicleDataGridViewTextBoxColumn.Name = "inVehicleDataGridViewTextBoxColumn";
-			// 
-			// tiltingDataGridViewTextBoxColumn
-			// 
-			this.tiltingDataGridViewTextBoxColumn.DataPropertyName = "Tilting";
-			this.tiltingDataGridViewTextBoxColumn.HeaderText = "Tilting";
-			this.tiltingDataGridViewTextBoxColumn.Name = "tiltingDataGridViewTextBoxColumn";
-			// 
-			// unknownDataGridViewTextBoxColumn
-			// 
-			this.unknownDataGridViewTextBoxColumn.DataPropertyName = "Unknown";
-			this.unknownDataGridViewTextBoxColumn.HeaderText = "Unknown";
-			this.unknownDataGridViewTextBoxColumn.Name = "unknownDataGridViewTextBoxColumn";
-			// 
-			// mongodbApiiBindingSource
-			// 
-			this.mongodbApiiBindingSource.DataSource = typeof(Dashboard.Model.MongodbApii);
-			// 
-			// internalIdDataGridViewTextBoxColumn
-			// 
-			this.internalIdDataGridViewTextBoxColumn.DataPropertyName = "InternalId";
-			this.internalIdDataGridViewTextBoxColumn.HeaderText = "InternalId";
-			this.internalIdDataGridViewTextBoxColumn.Name = "internalIdDataGridViewTextBoxColumn";
-			// 
-			// idDataGridViewTextBoxColumn
-			// 
-			this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-			this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-			this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-			// 
-			// timestampDataGridViewTextBoxColumn
-			// 
-			this.timestampDataGridViewTextBoxColumn.DataPropertyName = "Timestamp";
-			this.timestampDataGridViewTextBoxColumn.HeaderText = "Timestamp";
-			this.timestampDataGridViewTextBoxColumn.Name = "timestampDataGridViewTextBoxColumn";
-			// 
-			// lumixDataGridViewTextBoxColumn
-			// 
-			this.lumixDataGridViewTextBoxColumn.DataPropertyName = "Lumix";
-			this.lumixDataGridViewTextBoxColumn.HeaderText = "Lumix";
-			this.lumixDataGridViewTextBoxColumn.Name = "lumixDataGridViewTextBoxColumn";
-			// 
-			// temperatureDataGridViewTextBoxColumn
-			// 
-			this.temperatureDataGridViewTextBoxColumn.DataPropertyName = "Temperature";
-			this.temperatureDataGridViewTextBoxColumn.HeaderText = "Temperature";
-			this.temperatureDataGridViewTextBoxColumn.Name = "temperatureDataGridViewTextBoxColumn";
-			// 
-			// mongodbAmbientBindingSource
-			// 
-			this.mongodbAmbientBindingSource.DataSource = typeof(Dashboard.Model.MongodbAmbient);
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(464, 284);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(147, 18);
+			this.label4.TabIndex = 8;
+			this.label4.Text = "Location information:";
 			// 
 			// FormMongo
 			// 
@@ -392,13 +416,13 @@
 			this.Text = "FormMongo";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMongo_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.mongodbAmbientBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.mongodbApiiBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.mongodbBatteryBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.mongodbLocationBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.mongodbBatteryBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.mongodbApiiBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.mongodbAmbientBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

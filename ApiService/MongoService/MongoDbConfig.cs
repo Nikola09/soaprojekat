@@ -17,7 +17,8 @@ namespace MongoService
             get
             {
                 if (string.IsNullOrEmpty(User) || string.IsNullOrEmpty(Password))
-                    return $@"mongodb://{Host}:{Port}"; return $@"mongodb://{User}:{Password}@{Host}:{Port}";
+                    return $@"mongodb://{Host}:{Port}"; 
+                return $@"mongodb://{User}:{Password}@{Host}:{Port}";
             }
         }
     }

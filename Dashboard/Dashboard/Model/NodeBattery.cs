@@ -9,7 +9,7 @@ namespace Dashboard.Model
 	class NodeBattery
 	{
 		public string Id { get; set; }
-		public long Storage_Id { get; set; }
+		//public long Storage_Id { get; set; }
 		public long Timestamp { get; set; }
 
 		public int Level { get; set; }

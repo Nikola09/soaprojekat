@@ -8,8 +8,8 @@ namespace Dashboard.Model
 {
 	class MongodbBattery
 	{
-		public long InternalId { get; set; }
-		public long Id { get; set; }
+		public string InternalId { get; set; }
+		//public long Id { get; set; }
 
 		public long Timestamp { get; set; }
 

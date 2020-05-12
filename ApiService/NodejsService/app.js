@@ -135,8 +135,6 @@ var Routes = [{
     prefix: '/api',
     pin: 'role:api,cmd:*',
     map: {
-        home: { GET: true },
-        fetch: { GET: true},
 		batteries: { GET: true},
 		battery: { GET: true, suffix:'/:id'},
 		batteryadd: {GET:false,POST:true, suffix:'/:id'},
@@ -174,16 +172,6 @@ seneca.client()
         })
     })
 	
-seneca.add({ role: 'api', cmd: 'home'}, function (args, done) {
-    done(null, { response: "hey" });
-});
-seneca.add({ role: 'api', cmd: 'fetch'}, function (args, done) {
-	 var apple = this.make("fruit");
-	 apple.data$(false);
-	console.log('got here');
-	 apple.list$({}, done);
-});
-
 seneca.add({ role: 'api', cmd: 'batteries'}, function (args, done) {
 	 var battery = this.make("battery");
 	 battery.list$({}, done);

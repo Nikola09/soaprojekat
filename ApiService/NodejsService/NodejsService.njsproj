@@ -31,9 +31,6 @@
     <Content Include="..\ApiService\.dockerignore">
       <Link>.dockerignore</Link>
     </Content>
-    <Content Include="api.js">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="app.js" />
     <Content Include="Dockerfile" />
     <Content Include="package.json" />

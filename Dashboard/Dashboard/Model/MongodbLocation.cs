@@ -8,8 +8,8 @@ namespace Dashboard.Model
 {
 	class MongodbLocation
 	{
-        public long InternalId { get; set; }
-        public long Id { get; set; }
+        public string InternalId { get; set; }
+        //public long Id { get; set; }
         public long Timestamp { get; set; }
         public float Accuracy { get; set; }
         public double Latitude { get; set; }

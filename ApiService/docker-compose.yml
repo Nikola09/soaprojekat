@@ -1,7 +1,4 @@
 version: '3.4'
-#networks:
-#     - app-tier:
-#        ipv4_address: 172.25.124.88
 networks:
   app-tier:
 #    driver: nat

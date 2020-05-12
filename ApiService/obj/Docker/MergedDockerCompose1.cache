@@ -1,0 +1,175 @@
+networks:
+  app-tier:
+    ipam:
+      config:
+      - subnet: 172.25.124.0/24
+      driver: default
+services:
+  CollectorService:
+    build:
+      context: C:\Users\nikol\source\repos\ApiService\CollectorService
+      dockerfile: Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: CollectorService
+      target: base
+    container_name: CollectorService
+    depends_on:
+    - rabbitmq
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus
+      /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646 /LogDebuggeeOutputToStdOut
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: c:\.nuget\fallbackpackages
+      NUGET_PACKAGES: C:\.nuget\packages
+    image: collectorservice:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath c:\.nuget\packages
+        --additionalProbingPath c:\.nuget\fallbackpackages  "C:\app\bin\Debug\netcoreapp2.1\CollectorService.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: C:\remote_debugger\x64\utils\KillProcess.exe
+        dotnet.exe
+      com.microsoft.visualstudio.debuggee.program: '"C:\Program Files\dotnet\dotnet.exe"'
+      com.microsoft.visualstudio.debuggee.workingdirectory: C:\app
+    networks:
+      app-tier: {}
+    ports:
+    - published: 8881
+      target: 80
+    - published: 8883
+      target: 443
+    volumes:
+    - C:\Users\nikol\AppData\Roaming\ASP.NET\Https:C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https:ro
+    - C:\Users\nikol\AppData\Roaming\Microsoft\UserSecrets:C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets:ro
+    - C:\Users\nikol\source\repos\ApiService\CollectorService:C:\app:rw
+    - C:\Users\nikol\onecoremsvsmon\16.5.0102.0:C:\remote_debugger:ro
+    - C:\Users\nikol\source\repos\ApiService\CollectorService:C:\src:rw
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:c:\.nuget\fallbackpackages:ro
+    - C:\Users\nikol\.nuget\packages:c:\.nuget\packages:ro
+  MongoService:
+    build:
+      context: C:\Users\nikol\source\repos\ApiService\MongoService
+      dockerfile: Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: MongoService
+      target: base
+    container_name: MongoService
+    depends_on:
+    - mongo
+    - rabbitmq
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus
+      /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646 /LogDebuggeeOutputToStdOut
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      MongoDB__Host: 172.25.124.82
+      NUGET_FALLBACK_PACKAGES: c:\.nuget\fallbackpackages
+      NUGET_PACKAGES: C:\.nuget\packages
+    image: mongoservice:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath c:\.nuget\packages
+        --additionalProbingPath c:\.nuget\fallbackpackages  "C:\app\bin\Debug\netcoreapp2.1\MongoService.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: C:\remote_debugger\x64\utils\KillProcess.exe
+        dotnet.exe
+      com.microsoft.visualstudio.debuggee.program: '"C:\Program Files\dotnet\dotnet.exe"'
+      com.microsoft.visualstudio.debuggee.workingdirectory: C:\app
+    networks:
+      app-tier: {}
+    ports:
+    - published: 8885
+      target: 80
+    - published: 8886
+      target: 443
+    volumes:
+    - C:\Users\nikol\AppData\Roaming\ASP.NET\Https:C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https:ro
+    - C:\Users\nikol\AppData\Roaming\Microsoft\UserSecrets:C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets:ro
+    - C:\Users\nikol\source\repos\ApiService\MongoService:C:\app:rw
+    - C:\Users\nikol\onecoremsvsmon\16.5.0102.0:C:\remote_debugger:ro
+    - C:\Users\nikol\source\repos\ApiService\MongoService:C:\src:rw
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:c:\.nuget\fallbackpackages:ro
+    - C:\Users\nikol\.nuget\packages:c:\.nuget\packages:ro
+  NodejsService:
+    depends_on:
+    - mongo
+    - rabbitmq
+    image: nodejsservice
+    networks:
+      app-tier: {}
+    ports:
+    - published: 4000
+      target: 4000
+  StorageService:
+    build:
+      context: C:\Users\nikol\source\repos\ApiService\StorageService
+      dockerfile: Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: StorageService
+      target: base
+    container_name: StorageService
+    depends_on:
+    - db
+    - rabbitmq
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus
+      /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646 /LogDebuggeeOutputToStdOut
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: c:\.nuget\fallbackpackages
+      NUGET_PACKAGES: C:\.nuget\packages
+    image: storageservice:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath c:\.nuget\packages
+        --additionalProbingPath c:\.nuget\fallbackpackages  "C:\app\bin\Debug\netcoreapp2.1\StorageService.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: C:\remote_debugger\x64\utils\KillProcess.exe
+        dotnet.exe
+      com.microsoft.visualstudio.debuggee.program: '"C:\Program Files\dotnet\dotnet.exe"'
+      com.microsoft.visualstudio.debuggee.workingdirectory: C:\app
+    networks:
+      app-tier: {}
+    ports:
+    - published: 8882
+      target: 80
+    - published: 8884
+      target: 443
+    volumes:
+    - C:\Users\nikol\AppData\Roaming\ASP.NET\Https:C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https:ro
+    - C:\Users\nikol\AppData\Roaming\Microsoft\UserSecrets:C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets:ro
+    - C:\Users\nikol\source\repos\ApiService\StorageService:C:\app:rw
+    - C:\Users\nikol\onecoremsvsmon\16.5.0102.0:C:\remote_debugger:ro
+    - C:\Users\nikol\source\repos\ApiService\StorageService:C:\src:rw
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:c:\.nuget\fallbackpackages:ro
+    - C:\Users\nikol\.nuget\packages:c:\.nuget\packages:ro
+  db:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: pAS123456Xx
+    image: microsoft/mssql-server-windows-developer
+    networks:
+      app-tier:
+        ipv4_address: 172.25.124.81
+  mongo:
+    environment:
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_ROOT_USERNAME: root
+    image: mongo:3.6
+    networks:
+      app-tier:
+        ipv4_address: 172.25.124.82
+    ports:
+    - published: 27017
+      target: 27017
+    restart: always
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3
+    networks:
+      app-tier:
+        ipv4_address: 172.25.124.88
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+version: '3.4'
